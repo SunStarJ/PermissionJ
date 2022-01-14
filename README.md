@@ -6,6 +6,7 @@ PermissionJ
 
 老版本 build.gradle，务必添加阿里仓库,否则aspectj无法下载
 ```
+buildscript {
  repositories {
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
@@ -23,6 +24,24 @@ dependencies {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+   }
+    
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            cacheChangingModulesFor 0, 'seconds'
+        }
+    }
+}
 
 ```
 
