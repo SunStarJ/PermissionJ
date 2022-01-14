@@ -1,0 +1,4 @@
+
+rootProject.name = "WidgetProject"
+include ':app'
+include ':aspectj_permission'
