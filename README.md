@@ -45,7 +45,7 @@ allprojects {
 
 ```
 
-新版本 对于没有dependencies的
+新版本 对于没有allprojects的
 在settings.gradle修改代码为
 ```
 dependencyResolutionManagement {
